@@ -1,34 +1,165 @@
-
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #fff7f0;
-    color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #1a1a1a, #2c3e50);
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
 header {
-    background-color: #ff9933;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #ffd700;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
-section {
-    padding: 20px;
-    text-align: center;
+header h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: bold;
 }
 
-img {
-    max-width: 300px;
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+header p {
+  margin: 5px 0 0;
+  font-size: 18px;
+  font-style: italic;
+  color: #e0e0e0;
+}
+
+nav {
+  background-color: #1e272e;
+  padding: 10px 0;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+nav a {
+  color: #f7f7f7;
+  margin: 0 18px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+.section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #ffd700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.profil-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.profil-card {
+  flex: 1 1 250px;
+  background-color: #2f2f2f;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+.profil-foto {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.profil-card h3 {
+  color: #ffe066;
+  margin-bottom: 10px;
+}
+
+.profil-text {
+  flex: 2 1 400px;
+  background-color: #1d1d1d;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+}
+
+.profil-text p {
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+ul {
+  list-style-type: '💡 ';
+  padding-left: 20px;
+  margin-top: 15px;
+}
+
+.wa-button {
+  display: inline-block;
+  background-color: #2ecc71;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.wa-button:hover {
+  background-color: #27ae60;
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
+  background-color: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  margin-top: 40px;
+  border-top: 1px solid #333;
+}
+
+/* Tambahan untuk filosofi nama */
+.filosofi-nama {
+  background-color: rgba(255, 255, 255, 0.04);
+  padding: 20px;
+  border-left: 5px solid #ffd700;
+  border-radius: 8px;
+  font-style: italic;
+  color: #f7f7f7;
+  margin-top: 20px;
+}
+
+.filosofi-nama strong {
+  color: #ffe066;
+  font-weight: bold;
+}
+
+/* Responsif */
+@media screen and (max-width: 768px) {
+  .profil-wrapper {
+    flex-direction: column;
+  }
+
+  .profil-card, .profil-text {
+    width: 100%;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 10px;
+  }
 }

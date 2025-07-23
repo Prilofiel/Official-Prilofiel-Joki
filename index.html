@@ -1,51 +1,250 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JOKI PRILOFIEL</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Official Joki Prilofiel</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #1f1c18, #c9b37d);
+      color: #f1f1f1;
+    }
+
+    header {
+      background: linear-gradient(to right, #8e793e, #1f1c18);
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      color: #ffcc00;
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      color: #eee;
+      font-style: italic;
+    }
+
+    nav {
+      background-color: #2b2b2b;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: inline-flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .container h2 {
+      color: #ffe066;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+
+    .profil-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .profil-card {
+      flex: 1;
+      text-align: left;
+    }
+
+    .profil-foto-wrapper {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border-radius: 100px;
+      overflow: hidden;
+      border: 3px solid #ffd700;
+    }
+
+    .profil-foto {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .profil-card h3 {
+      margin-top: 10px;
+      color: #ffd700;
+    }
+
+    .bio-singkat {
+      font-size: 0.95rem;
+      color: #ddd;
+    }
+
+    .profil-text {
+      flex: 2;
+      text-align: right;
+      font-size: 1rem;
+      color: #f5f5f5;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .wa-button {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 12px 24px;
+      margin-top: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    .wa-button:hover {
+      background-color: #1ebc5a;
+    }
+
+    .dokumentasi {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .dokumentasi img {
+      width: 300px;
+      height: 220px;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 10px;
+      border: 2px solid #ffcc00;
+    }
+
+    footer {
+      background-color: #1b1b1b;
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .profil-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .profil-text {
+        text-align: left;
+        margin-top: 20px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .profil-foto-wrapper {
+        margin: 0 auto;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>JOKI PRILOFIEL</h1>
-        <p>Jasa Joki Tugas dan Turnitin</p>
-    </header>
 
-    <section class="owner">
-        <h2>Profil Pemilik</h2>
-        <img src="images/pemilik1.jpeg" alt="Pemilik 1">
-        <img src="images/pemilik2.jpeg" alt="Pemilik 2">
-    </section>
+  <header>
+    <h1>OFFICIAL JOKI PRILOFIEL</h1>
+    <p>Konsultasi Akademik Digital | Bersama Kami Kita <strong>MAJU</strong> (Mandiri, Akuntabel, Jelih, dan Unggul)</p>
+  </header>
 
-    <section class="ig">
-        <h2>Instagram Usaha</h2>
-        <img src="images/ig.jpeg" alt="Instagram Usaha">
-    </section>
+  <nav>
+    <ul>
+      <li><a href="#profil">Profil</a></li>
+      <li><a href="#layanan">Layanan</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </nav>
 
-    <section class="order">
-        <h2>Chat Order</h2>
-        <img src="images/order.jpeg" alt="Chat Order">
-    </section>
+  <section id="profil" class="section">
+    <div class="container">
+      <h2>Profil Pemilik & Usaha</h2>
+      <div class="profil-wrapper">
+        <div class="profil-card">
+          <div class="profil-foto-wrapper">
+            <img src="https://i.imgur.com/5uNWv2u.jpeg" alt="Foto Ama Prinz" class="profil-foto" />
+          </div>
+          <h3>Ama Prinz</h3>
+          <p class="bio-singkat">Pria kelahiran 11 Juni 2003, berasal dari Flores Timur, NTT. Mahasiswa Ilmu Pemerintahan Universitas AMIKOM Yogyakarta yang aktif dalam literasi dan pelayanan akademik digital. Moto hidupnya: <em>Terima, Syukuri, dan Jadikan Istimewa</em>.</p>
+        </div>
+        <div class="profil-text">
+          <p><strong>Prinz</strong>, sapaan akrab Stanislaus Prinz Boli Danga, adalah pendiri usaha <strong>Official Joki Prilofiel</strong>. Ia adalah mahasiswa Prodi Ilmu Pemerintahan Universitas AMIKOM Yogyakarta, dengan latar belakang pendidikan keras dan disiplin dari Seminari San Dominggo. Di sana, ia terbiasa menulis, membaca, dan mengelola karya ilmiah seperti skripsi.</p>
+          <p>Nama <strong>Prilofiel</strong> adalah akronim dari "Pri" (Prinz), "Lo" (ayah), "Fi" (ibu), dan "El" (adik). Melambangkan cinta dan dukungan keluarga dalam membangun usaha penuh integritas dan dedikasi.</p>
+          <img src="https://i.imgur.com/qbixlq9.jpeg" alt="Instagram Usaha" style="margin-top: 20px; width: 200px; border-radius: 12px; border: 2px solid #ffd700;" />
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="video">
-        <h2>Video Edukasi</h2>
-        <img src="images/video.jpeg" alt="Cuplikan Video">
-    </section>
+  <section id="layanan" class="section">
+    <div class="container">
+      <h2>Layanan Kami</h2>
+      <ul>
+        <li>📄 Penulisan Makalah, Artikel, dan PPT Mahasiswa</li>
+        <li>🎞️ Pembuatan Video dan Media Pembelajaran</li>
+        <li>📚 Modul Mengajar untuk PGSD dan lainnya</li>
+        <li>📝 Editing Tugas & Pendampingan Skripsi</li>
+        <li>🔍 Pemeriksaan Turnitin (Asli & Transparan)</li>
+      </ul>
+    </div>
+  </section>
 
-    <section class="turnitin">
-        <h2>Hasil Turnitin</h2>
-        <img src="images/turnitin.jpeg" alt="Turnitin">
-    </section>
+  <section class="section">
+    <div class="container">
+      <h2>Dokumentasi Bukti Usaha</h2>
+      <div class="dokumentasi">
+        <img src="https://i.imgur.com/mxE1a6Q.jpeg" alt="IG Usaha (Crop Versi Akun & Postingan)">
+        <p style="margin-top: 10px;"><a href="https://i.imgur.com/4pZ34lI.jpeg" target="_blank">Chat Order</a> | <a href="https://i.imgur.com/DnYrx1J.jpeg" target="_blank">Video Pembelajaran</a> | <a href="https://i.imgur.com/5flxkMk.jpeg" target="_blank">Turnitin</a> | <a href="https://i.imgur.com/h1tSpjv.jpeg" target="_blank">Testimoni & Pengiriman</a></p>
+      </div>
+    </div>
+  </section>
 
-    <section class="testimoni">
-        <h2>Testimoni Pelanggan</h2>
-        <img src="images/testimoni.jpeg" alt="Testimoni">
-    </section>
+  <section id="kontak" class="section">
+    <div class="container">
+      <h2>Kontak</h2>
+      <p>Hubungi kami untuk pemesanan dan konsultasi:</p>
+      <a href="https://wa.me/6285137727484" class="wa-button">Chat WhatsApp: 0851-3772-7484</a>
+      <p>Email: <a href="mailto:officialjokiprilofiel@gmail.com">officialjokiprilofiel@gmail.com</a></p>
+      <p>Instagram: <a href="https://instagram.com/officialjokiprilofiel" target="_blank">@officialjokiprilofiel</a></p>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 JOKI PRILOFIEL - Semua Hak Dilindungi</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 OFFICIAL JOKI PRILOFIEL. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
