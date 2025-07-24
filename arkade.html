@@ -77,6 +77,39 @@
       margin: auto;
     }
 
+    /* GALERI TULISAN */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.3rem;
+      color: #2c3e50;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
     footer {
       text-align: center;
       font-size: 0.9rem;
@@ -87,7 +120,6 @@
 </head>
 <body>
 
-  <!-- Tombol Kembali ke Halaman Utama -->
   <a href="index.html" class="back-button">← Kembali ke Halaman Utama</a>
 
   <header>
@@ -108,13 +140,28 @@
   </nav>
 
   <main>
-    <p style="text-align:center; font-style:italic; margin-top: 3rem;">
-      "Konten sedang dipersiapkan dengan cinta dan ketekunan dari Timur..."
-    </p>
+    <h2 style="text-align:center;">Galeri Tulisan</h2>
+
+    <div class="gallery">
+      <div class="card">
+        <h3>Meniti Karir dari Larantuka ke Timika</h3>
+        <p>Sebuah potret perjuangan ASN muda alumni IPDN di pelosok Papua. Refleksi antara dedikasi dan pelayanan publik.</p>
+      </div>
+      <div class="card">
+        <h3>Puisi: Salam dari Timur</h3>
+        <p>Puisi tentang harapan, laut, dan cinta tanah kelahiran. Sebuah sapaan dari Timur untuk dunia.</p>
+      </div>
+      <div class="card">
+        <h3>Fiksi: Di Balik Gunung Ile Mandiri</h3>
+        <p>Cerita pendek tentang pencarian jati diri, keluarga, dan rahasia tua yang terpendam di balik gunung.</p>
+      </div>
+      <!-- Tambah lagi di sini jika perlu -->
+    </div>
   </main>
 
   <footer>
     &copy; 2025 Ama Prinz | JOKI PRILOFIEL | Arkade Langit Timur
   </footer>
+
 </body>
 </html>
