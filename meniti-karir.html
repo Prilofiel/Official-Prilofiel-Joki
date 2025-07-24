@@ -48,6 +48,13 @@
       line-height: 1.6;
       white-space: pre-line;
     }
+    .penulis {
+      text-align: right;
+      font-style: italic;
+      font-size: 0.9em;
+      color: #5c4a36;
+      margin-top: 2em;
+    }
     .interaksi {
       display: flex;
       justify-content: space-between;
@@ -59,7 +66,7 @@
       border-radius: 12px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-    .interaksi button {
+    .interaksi button, .interaksi a {
       background-color: #6b4c3b;
       color: white;
       border: none;
@@ -67,8 +74,9 @@
       margin-right: 1em;
       border-radius: 6px;
       cursor: pointer;
+      text-decoration: none;
     }
-    .interaksi button:hover {
+    .interaksi button:hover, .interaksi a:hover {
       background-color: #5c3e2d;
     }
     .interaksi span {
@@ -83,6 +91,7 @@
       Sebuah narasi inspiratif tentang Lita Deros, alumni IPDN asal Larantuka yang mengabdi sebagai ASN muda di Timika. Jejak langkahnya menyingkap dedikasi dan harapan di tanah perbatasan.
     </div>
   </header>
+
   <article>
 Lita Deros, perempuan muda kelahiran Larantuka, adalah potret ketekunan yang lahir dari timur Indonesia. Lulusan IPDN ini memulai pengabdiannya sebagai Aparatur Sipil Negara (ASN) di Kabupaten Mimika, Papua. Di tanah yang jauh dari kampung halamannya, ia menjalani keseharian sebagai staf di bidang pemerintahan, mengurus hal-hal administratif dan pembangunan desa.
 
@@ -94,10 +103,10 @@ Lita percaya bahwa menjadi ASN bukan soal status, tapi soal dedikasi. Ia membang
 
 Kisah Lita bukan sekadar perjalanan karir. Ini adalah cerita tentang keberanian merantau, keteguhan memegang nilai, dan cinta terhadap tanah air. Dari Larantuka ke Timika, ia meniti jalan dengan setia—setapak demi setapak, membuktikan bahwa dari ujung timur Indonesia, lahir anak-anak bangsa yang luar biasa.
   </article>
-  
-<p class="text-right italic text-sm text-neutral-600 dark:text-neutral-300 mt-6">
-  Ditulis oleh <strong>Stanislaus Prinz</strong>
-</p>
+
+  <p class="penulis">
+    Ditulis oleh <strong>Stanislaus Prinz</strong>
+  </p>
 
   <div class="interaksi">
     <div>
@@ -107,9 +116,8 @@ Kisah Lita bukan sekadar perjalanan karir. Ini adalah cerita tentang keberanian 
     </div>
     <div>
       <button onclick="copyLink()">🔗 Bagikan</button>
-      <a href="/pdf/meniti-karir.pdf" download><button>📥 Unduh PDF</button></a>
+      <a href="https://raw.githubusercontent.com/Prilofiel/prilofiel-pdf/main/meniti-karir.pdf" download>📥 Unduh PDF</a>
     </div>
   </div>
-
 </body>
 </html>
