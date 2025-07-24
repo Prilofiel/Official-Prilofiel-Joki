@@ -1,1 +1,138 @@
-<!DOCTYPE html><html lang="id"><head>  <meta charset="UTF-8">  <meta name="viewport" content="width=device-width, initial-scale=1">  <title>Salam dari Timur</title>  <style>    body {      font-family: 'Georgia', serif;      line-height: 1.8;      padding: 20px;      background: #fdf7f0;      max-width: 800px;      margin: auto;      color: #333;    }    h1 {      text-align: center;      font-size: 2.2em;    }    em {      display: block;      text-align: center;      margin-bottom: 20px;    }    pre {      white-space: pre-wrap;      font-family: inherit;    }    .like-button {      margin-top: 20px;      background-color: #d77;      color: #fff;      border: none;      padding: 10px 16px;      border-radius: 10px;      cursor: pointer;    }    .like-button:hover {      background-color: #c44;    }    .back-link {      display: block;      text-align: center;      margin-top: 40px;    }  </style></head><body>  <h1>Salam dari Timur</h1>  <em>Oleh Stanislaus Prinz</em>  <pre>Dari jantung timur yang lirih,aku kirimkan sajak, bukan hanya kata,melainkan desir angin yang merindukan pelabuhan,dan cahaya fajar yang memanggil nama-namadari peta yang lupa menoleh ke matahari pertama.Laut bukan hanya air,ia adalah kitab tua yang tak pernah selesai dibaca.Dalam ombaknya: rahasia para leluhur,dalam pasangnya: tangis ibu yang menggugurkan rindu.Dan aku,adalah anak-anak tanah garamyang belajar berenang di sunyi dan badai.Aku menyebut rumahpada pulau yang tak terucap dalam berita,tempat bintang turun perlahan ke atap-atap rumahdan doa-doa tidak ditulis, tapi ditiupkan lewat bambu serulingdi malam yang tidak pernah lupa bernyanyi.Wahai dunia,jika kau pernah lupa pada Timur,ingatlah,kami yang jauh bukan berarti tak ada.Kami yang diam, bukan berarti tak bicara.Kami adalah gema yang enggan menggertaktapi tetap menggema dalam setiap gelombangyang tak pernah kau duga asalnya.Harapan kami bukan janji dalam brosur,tapi benih yang kami tanam diam-diamdi ladang garam,di ujung tombak,di peluh para petani dan nyanyian nelayan.Kami tidak menuntut dunia mendengar,cukup tahu bahwa kami masih bernyanyi.Kami menyulam cahaya dari ujung fajar,menyalakan lentera di batas harapanagar kapalmu tahu:masih ada Timur yang setia memanggilmu pulang.  </pre>  <button class="like-button" onclick="likePost()">❤️ Suka <span id="likeCount">0</span></button>  <a class="back-link" href="arkade.html">← Kembali ke Arkade</a>  <script>    let count = 0;    function likePost() {      count++;      document.getElementById('likeCount').textContent = count;    }  </script></body></html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salam dari Timur</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background-color: #fffaf5;
+      color: #222;
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 2em;
+      text-align: center;
+      margin-bottom: 0.2em;
+    }
+    .author {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 2em;
+    }
+    .poem p {
+      margin: 1em 0;
+      white-space: pre-line;
+    }
+    .actions {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+    }
+    .actions button, .actions a {
+      padding: 0.7em;
+      border: none;
+      background-color: #e07b39;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+    }
+    .share-box {
+      background-color: #f5eadd;
+      padding: 1em;
+      border-radius: 6px;
+      margin-top: 1em;
+      text-align: center;
+    }
+    .share-box input {
+      width: 90%;
+      padding: 0.5em;
+      margin-top: 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Salam dari Timur</h1>
+    <div class="author">Oleh Stanislaus Prinz</div>
+
+    <div class="poem">
+      <p>
+Di tanah di mana matahari pertama menyapa,
+Aku menulis rindu yang tidak bisa dijelaskan kata.
+Antara wangi laut dan kidung gereja tua,
+Ada jiwa yang tak pernah lelah mencinta.
+
+Laut bukan hanya air,
+ia adalah kitab tua yang tak pernah selesai dibaca.
+Dalam ombaknya: rahasia para leluhur,
+dalam pasangnya: tangis ibu yang menggugurkan rindu.
+Dan aku,
+adalah anak-anak tanah garam
+yang belajar berenang di sunyi dan badai.
+
+Aku menyebut rumah
+pada pulau yang tak terucap dalam berita,
+tempat bintang turun perlahan ke atap-atap rumah
+dan doa-doa tidak ditulis, tapi ditiupkan lewat bambu seruling
+di malam yang tidak pernah lupa bernyanyi.
+
+Wahai dunia,
+jika kau pernah lupa pada Timur,
+ingatlah,
+kami yang jauh bukan berarti tak ada.
+Kami yang diam, bukan berarti tak bicara.
+Kami adalah gema yang enggan menggertak
+tapi tetap menggema dalam setiap gelombang
+yang tak pernah kau duga asalnya.
+
+Harapan kami bukan janji dalam brosur,
+tapi benih yang kami tanam diam-diam
+di ladang garam,
+di ujung tombak,
+di peluh para petani dan nyanyian nelayan.
+
+Kami tidak menuntut dunia mendengar,
+cukup tahu bahwa kami masih bernyanyi.
+Kami menyulam cahaya dari ujung fajar,
+menyalakan lentera di batas harapan
+agar kapalmu tahu:
+masih ada Timur yang setia memanggilmu pulang.
+      </p>
+    </div>
+
+    <div class="actions">
+      <button onclick="likePoem()">💗 Suka</button>
+      <div class="share-box">
+        <p><strong>Bagikan Tulisan Ini</strong></p>
+        <input type="text" value="https://prilofiel.vercel.app/salam-dari-timur.html" id="shareLink" readonly />
+        <button onclick="copyLink()">Salin Link</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function likePoem() {
+      alert('Terima kasih telah menyukai tulisan ini!');
+    }
+    function copyLink() {
+      var copyText = document.getElementById("shareLink");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      alert("Link telah disalin: " + copyText.value);
+    }
+  </script>
+</body>
+</html>
