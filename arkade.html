@@ -12,29 +12,26 @@
       padding: 0;
       line-height: 1.7;
       color: #333;
-      <a href="index.html" class="back-button">← Kembali ke Halaman Utama</a>
-
-<style>
-  .back-button {
-    display: inline-block;
-    margin: 20px;
-    padding: 10px 20px;
-    background: #f39c12;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s ease;
-  }
-
-  .back-button:hover {
-    background: #e67e22;
-    transform: translateX(-5px);
-    box-shadow: 2px 2px 10px rgba(243, 156, 18, 0.6);
-  }
-</style>
-
     }
+
+    .back-button {
+      display: inline-block;
+      margin: 20px;
+      padding: 10px 20px;
+      background: #f39c12;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .back-button:hover {
+      background: #e67e22;
+      transform: translateX(-5px);
+      box-shadow: 2px 2px 10px rgba(243, 156, 18, 0.6);
+    }
+
     header {
       background-color: #2c3e50;
       color: #ecf0f1;
@@ -86,17 +83,22 @@
       padding: 2rem 1rem;
       color: #777;
     }
-</style>
+  </style>
 </head>
 <body>
-<header>
+
+  <!-- Tombol Kembali ke Halaman Utama -->
+  <a href="index.html" class="back-button">← Kembali ke Halaman Utama</a>
+
+  <header>
     <h1>Arkade Langit Timur</h1>
     <p>“Arkade Langit Timur adalah rumah kata, ruang renung, dan jendela jiwa.  
     Di sini, setiap karya adalah jejak pikiran, napas iman, dan bisikan hati dari Timur Indonesia.  
     Entah itu ilmiah, fiksi, puisi, atau kabar nyata—semuanya berpulang ke satu hal:  
     dedikasi seorang anak bangsa bernama Ama Prinz.”</p>
   </header>
-<nav>
+
+  <nav>
     <a href="index.html">🏠 Beranda</a>
     <a href="#ilmiah">📚 Ilmiah</a>
     <a href="#fiksi">✍️ Fiksi</a>
@@ -104,13 +106,14 @@
     <a href="#berita">🎙️ Berita</a>
     <a href="#visual">🎨 Visual</a>
   </nav>
-<main>
-    <!-- Konten karya-karya akan ditambahkan di sini -->
+
+  <main>
     <p style="text-align:center; font-style:italic; margin-top: 3rem;">
       "Konten sedang dipersiapkan dengan cinta dan ketekunan dari Timur..."
     </p>
   </main>
-<footer>
+
+  <footer>
     &copy; 2025 Ama Prinz | JOKI PRILOFIEL | Arkade Langit Timur
   </footer>
 </body>
