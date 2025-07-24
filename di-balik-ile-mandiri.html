@@ -3,155 +3,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Di Balik Gunung Ile Mandiri</title>
+  <title>Di Balik Ile Mandiri</title>
   <style>
     body {
       font-family: 'Georgia', serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #222;
-    }
-
-    main {
-      max-width: 768px;
+      background-color: #fdf8f3;
+      color: #3e2f1c;
+      padding: 2rem;
+      max-width: 800px;
       margin: auto;
-      padding: 2rem 1.5rem;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
-
     h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      text-align: center;
+      color: #7b4c1e;
+      font-size: 2.5rem;
     }
-
-    p {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      margin-bottom: 1.2rem;
-      text-align: justify;
-    }
-
-    .italic {
+    .author {
       font-style: italic;
-      color: #555;
-      text-align: center;
+      margin-bottom: 1rem;
     }
-
-    .syair {
-      font-style: italic;
-      margin: 1.5rem 0;
-      padding-left: 1rem;
-      border-left: 3px solid #ccc;
-    }
-
-    .quote {
-      font-style: italic;
-      text-align: center;
-      font-size: 1.1rem;
-      margin: 2rem 0;
-    }
-
-    .note {
-      font-style: italic;
-      font-size: 0.85rem;
-      color: #555;
-      margin-top: 2rem;
-      border-top: 1px solid #ccc;
-      padding-top: 1rem;
-    }
-
-    .btns {
-      margin-top: 2rem;
-      text-align: center;
-    }
-
-    button, .download-link, .back-link {
-      background-color: #e53e3e;
+    .like-btn, .copy-btn, .download-btn {
+      background-color: #a77d52;
       color: white;
-      padding: 0.5rem 1rem;
       border: none;
-      border-radius: 6px;
-      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      margin-right: 0.5rem;
       cursor: pointer;
-      margin: 0.3rem;
-      display: inline-block;
+      border-radius: 8px;
     }
-
-    button:hover, .download-link:hover, .back-link:hover {
-      background-color: #c53030;
+    .like-btn.liked {
+      background-color: #6d4c1b;
     }
-
-    #likeCount {
-      margin-left: 0.5rem;
-      font-weight: bold;
+    .toolbar {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
     }
-
-    @media (max-width: 480px) {
-      main {
-        padding: 1.2rem;
-      }
-
-      h1 {
-        font-size: 1.6rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
+    .message {
+      color: green;
+      margin-top: 0.5rem;
+    }
+    .sinopsis {
+      margin-top: 2rem;
+      font-size: 1.1rem;
+      line-height: 1.7;
     }
   </style>
 </head>
 <body>
-  <main>
-    <h1>Di Balik Gunung Ile Mandiri</h1>
-    <p class="italic"><em>Oleh: <strong>Stanislaus Prinz</strong></em></p>
 
-    <p>Gunung Ile Mandiri berdiri gagah di ufuk Timur Larantuka, seperti penjaga abadi rahasia-rahasia tua yang tertimbun dalam sunyi...</p>
+  <h1>Di Balik Ile Mandiri</h1>
+  <div class="author">Oleh: Stanislaus Prinz</div>
 
-    <p><strong>Sebuah Pencarian di Tanah yang Tak Pernah Lupa</strong></p>
+  <div class="toolbar">
+    <button class="like-btn" onclick="likePost()">Suka ❤️ (<span id="like-count">103</span>)</button>
+    <button class="copy-btn" onclick="copyLink()">Bagikan</button>
+    <button class="download-btn" onclick="downloadPDF()">Unduh PDF</button>
+    <div class="message" id="message"></div>
+  </div>
 
-    <p>Di timur jauh, di ujung pulau yang dilukis matahari sebelum fajar, berdirilah Ile Mandiri bukan sekadar gunung, melainkan sabda bisu dari zaman yang tak tercatat...</p>
-
-    <p>“Gunung ini bukan hanya batu dan api, Ama Kael,” kata seorang tua di pelabuhan saat ia turun dari kapal. “Ia adalah ingatan yang menyamar sebagai alam.”</p>
-
-    <div class="syair">
-      <p>Di balik batu, suara ibu<br>
-      Menyapa pulang anak rindu<br>
-      Jika tak tahu asal benih<br>
-      Akar tak bisa pulang utuh</p>
-    </div>
-
-    <div class="quote">
-      “Aku anak Ile Mandiri.<br>
-      Aku darah yang hilang dan kini kembali.<br>
-      Aku penjaga doa-doa tua.<br>
-      Aku nyala harapan dari Timur.”
-    </div>
-
-    <div class="note">
-      <strong><em>Catatan Penulis:</em></strong><br>
-      <em>Di Balik Gunung Ile Mandiri</em> adalah sebuah fiksi imajinatif yang terinspirasi dari kekayaan budaya dan spiritualitas Flores Timur. Cerita ini adalah penghormatan terhadap tanah kelahiran, pentingnya menjaga identitas, dan peran generasi muda sebagai jembatan antara masa lalu dan masa depan.
-    </div>
-
-    <div class="btns">
-      <button onclick="likePost()">❤️ Like</button>
-      <span id="likeCount">0</span> suka
-      <a class="download-link" href="https://github.com/Prilofiel/prilofiel-pdf/raw/main/di-balik-ile-mandiri.pdf" download>📄 Unduh PDF Lengkap</a><br>
-      <a href="arkade.html" class="back-link">&larr; Kembali ke Arkade</a>
-    </div>
-  </main>
+  <div class="sinopsis">
+    Di balik gunung Ile Mandiri yang menjulang, tersembunyi kisah tentang Lukas, seorang pemuda pencari jati diri yang kembali ke tanah leluhurnya di Larantuka. Dengan balutan sejarah dan bisikan leluhur, Lukas menelusuri jejak masa lalu keluarganya dan rahasia yang terkubur dalam sunyi. Di tiap langkah, ia temukan bahwa warisan bukan sekadar tanah dan nama, tetapi juga luka, harapan, dan panggilan jiwa. Cerita ini mengajak kita menyelami makna rumah, identitas, dan keberanian untuk berdamai dengan sejarah yang tak selesai.
+  </div>
 
   <script>
-    let count = localStorage.getItem("ileMandiriLikes") || 0;
-    document.getElementById("likeCount").innerText = count;
+    let liked = false;
+    let likeCount = 103;
 
     function likePost() {
-      count++;
-      localStorage.setItem("ileMandiriLikes", count);
-      document.getElementById("likeCount").innerText = count;
+      if (!liked) {
+        liked = true;
+        likeCount++;
+        document.getElementById("like-count").innerText = likeCount;
+        document.querySelector(".like-btn").classList.add("liked");
+        document.getElementById("message").innerText = "Terima kasih telah menyukai.";
+      } else {
+        document.getElementById("message").innerText = "Kamu sudah menyukai ini.";
+      }
+    }
+
+    function copyLink() {
+      const link = window.location.href;
+      navigator.clipboard.writeText(link);
+      document.getElementById("message").innerText = "Link berhasil disalin.";
+    }
+
+    function downloadPDF() {
+      const pdfLink = "https://github.com/Prilofiel/prilofiel-pdf/raw/main/di-balik-ile-mandiri.pdf";
+      const link = document.createElement('a');
+      link.href = pdfLink;
+      link.download = "di-balik-ile-mandiri.pdf";
+      link.click();
     }
   </script>
 </body>
