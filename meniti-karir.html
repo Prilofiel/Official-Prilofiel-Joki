@@ -1,118 +1,129 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meniti Karir dari Larantuka ke Timika</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meniti Karir dari Larantuka ke Timika - Prilofiel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400;1,700&display=swap" rel="stylesheet">
+  <script>
+    let liked = false;
+    let likeCount = 103;
+    function toggleLike() {
+      if (!liked) {
+        likeCount++;
+        document.getElementById("likeCount").textContent = likeCount;
+        document.getElementById("likeMessage").textContent = "Terima kasih telah menyukai.";
+        liked = true;
+      }
+    }
+    function copyLink() {
+      const dummy = document.createElement('input');
+      const text = window.location.href;
+      document.body.appendChild(dummy);
+      dummy.value = text;
+      dummy.select();
+      document.execCommand('copy');
+      document.body.removeChild(dummy);
+      alert("Link telah disalin!");
+    }
+  </script>
   <style>
     body {
-      font-family: 'Open Sans', sans-serif;
+      font-family: 'Playfair Display', serif;
+      line-height: 1.8;
       margin: 0;
-      padding: 2rem;
-      background-color: #fffaf5;
-      color: #222;
-      line-height: 1.7;
+      padding: 20px;
+      background: #fffaf5;
+      color: #333;
     }
+
     .container {
       max-width: 700px;
-      margin: 0 auto;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
     }
+
     h1 {
-      font-size: 2em;
-      margin-bottom: 0.5em;
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 20px;
     }
-    .intro {
-      font-style: italic;
-      color: #444;
-      margin-bottom: 2em;
-    }
-    p {
-      margin-bottom: 1.5em;
+
+    .content p {
       text-align: justify;
+      margin-bottom: 16px;
     }
-    .author {
-      text-align: right;
-      font-style: italic;
-    }
-    .actions {
-      margin-top: 2em;
+
+    .footer {
+      margin-top: 40px;
       display: flex;
       flex-direction: column;
-      gap: 0.5em;
+      align-items: center;
     }
-    .actions button, .actions a {
-      padding: 0.7em;
-      border: none;
-      background-color: #e07b39;
+
+    .like-share {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .like-share button {
+      background-color: #f26d5b;
       color: white;
-      border-radius: 5px;
-      cursor: pointer;
-      text-align: center;
-      text-decoration: none;
-    }
-    .share-box {
-      background-color: #f5eadd;
-      padding: 1em;
+      border: none;
+      padding: 10px 16px;
+      font-size: 14px;
       border-radius: 6px;
-      margin-top: 1em;
-      text-align: center;
+      cursor: pointer;
     }
-    .share-box input {
-      width: 90%;
-      padding: 0.5em;
-      margin-top: 0.5em;
+
+    .like-share button:hover {
+      background-color: #d85b4c;
+    }
+
+    #likeMessage {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #888;
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <h1>Meniti Karir dari Larantuka ke Timika</h1>
-
-    <p class="intro">Sebuah potret perjuangan ASN muda alumni IPDN di pelosok Papua. Refleksi antara dedikasi dan pelayanan publik.</p>
-    <p class="intro">Tulisan ini adalah potret nyata dari seorang anak Larantuka yang mengabdi jauh di tanah Timika. Ia bukan hanya ASN biasa, melainkan pelayan yang meniti jalan sunyi, memikul tanggung jawab, dan menjaga harapan di tanah yang keras namun penuh kasih.</p>
-
-    <p>Lita Deros, nama itu mungkin terdengar asing di telinga banyak orang. Namun di tanah Timika yang jauh di pelosok Papua, nama itu telah menjadi inspirasi. Ia lahir di Larantuka, sebuah kota kecil di ujung timur Flores, tempat laut dan iman berpadu dalam keheningan pagi.</p>
-    <p>Ia teringat pesan ayahnya yang pernah berkata, <em>“Lita, jika kelak engkau bekerja, jangan pernah menjual idealismemu untuk kenyamanan. Karena ASN itu bukan profesi biasa, tapi panggilan yang suci.”</em> Kalimat itu kini menjadi nyala yang terus membakar semangatnya di tiap pagi.</p>
-    <p>Di balik sosoknya yang tenang dan ramah, Lita memikul beban besar sebagai perempuan, perantau, dan pelayan publik di tanah yang masih bertarung dengan kesenjangan. Namun ia membuktikan, bahwa keberanian bukan monopoli lelaki.</p>
-    <p>Menjadi alumni IPDN bukanlah akhir dari sebuah perjuangan. Justru di situlah awal mula pengabdian sejati bermula. Lita tahu, panggilan untuk membangun negeri bukan sekadar slogan. Itu adalah keputusan sadar untuk hidup di antara tantangan, di tempat yang banyak orang enggan pergi.</p>
-    <p>Di Timika, ia bekerja bukan sekadar menjalankan tugas administratif, melainkan berperan sebagai jembatan antara negara dan rakyat kecil yang seringkali terabaikan. Ia mengedepankan prinsip etika kerja: integritas, keadilan, dan empati. Ia juga membuka ruang diskusi di kantornya, menghadirkan pendekatan humanis di tengah mekanisme yang kaku.</p>
-    <p>Tidak mudah tentu. Ia menghadapi keterbatasan fasilitas, jaringan yang buruk, bahkan risiko keamanan. Namun ia tetap bertahan. Sebab baginya, dedikasi tidak diukur dari kenyamanan, tapi dari seberapa besar dampak yang bisa ditinggalkan.</p>
-    <p>Ia belajar untuk melihat wajah Indonesia yang lain—yang sering luput dari sorotan media dan kebijakan pusat. Kisah Lita adalah tentang keberanian meninggalkan zona nyaman. Tentang seorang perempuan muda yang tidak sekadar bekerja demi gaji, tapi untuk sebuah cita-cita luhur: menghadirkan negara dalam kehidupan sehari-hari rakyat kecil.</p>
-    <p>Di Timika, Lita bukan hanya ASN. Ia adalah sahabat bagi masyarakat, penggerak semangat, dan wajah humanis dari birokrasi yang kerap dianggap dingin. Ia mengajarkan kita bahwa pengabdian tidak harus spektakuler, cukup setia di tempat yang Tuhan percayakan, dan melakukannya dengan sepenuh hati.</p>
-    <p>Larantuka mungkin jauh dari Timika. Tapi hati yang tulus, semangat pengabdian, dan keyakinan pada nilai-nilai kebaikan telah menjembatani jarak itu. Lita Deros telah menunjukkan bahwa menjadi ASN bukan sekadar karier, tapi panggilan untuk menjadi cahaya di tempat yang gelap.</p>
-    <p>Dan dalam sunyi Papua, terang itu perlahan bersinar lewat langkah kecilnya. Semoga kisah ini menjadi inspirasi bagi generasi muda, bahwa di manapun kita ditempatkan, selalu ada ruang untuk berkarya dan melayani.</p>
-
-    <p class="author">Oleh: Stanislaus Prinz</p>
-
-    <div class="actions">
-      <a href="https://github.com/Prilofiel/prilofiel-pdf/raw/main/meniti-karir.pdf" target="_blank">🔽 Unduh Versi PDF Lengkap</a>
-      <button onclick="likePost()">❤️ Suka <span id="likeCount">0</span></button>
-      <div class="share-box">
-        <p><strong>Bagikan Tulisan Ini</strong></p>
-        <input type="text" value="https://prilofiel.vercel.app/meniti-karir.html" id="shareLink" readonly />
-        <button onclick="copyLink()">Salin Link</button>
+    <div class="content">
+      <p>
+        Lita Deros bukan hanya nama, tapi sebuah perjalanan. Lahir di Larantuka—kota kecil yang dipeluk tenang oleh Laut Sawu dan Gunung Ile Mandiri—ia tumbuh di antara semangat doa, sapaan adat, dan peluh orang tua yang percaya pada pendidikan sebagai jalan keluar dari keterbatasan.
+      </p>
+      <p>
+        Sejak kecil, Lita telah memperlihatkan tekad berbeda. Ia tak sekadar belajar untuk nilai, tetapi untuk mengubah nasib. Ketika akhirnya diterima di IPDN, ada air mata syukur yang tak bisa dibendung. Ia tahu, jalan ini tidak akan mudah—tetapi ia telah memulainya.
+      </p>
+      <p>
+        Setelah lulus, penempatan pertamanya adalah Timika, Papua. Banyak yang mengeluh karena dianggap terpencil dan penuh tantangan. Tapi Lita melihatnya sebagai ladang pengabdian. “Di sinilah aku harus menanam. Sebab benih yang setia akan tumbuh, meski tanahnya keras,” begitu katanya pada suatu wawancara.
+      </p>
+      <p>
+        Ia terlibat aktif dalam pelayanan publik, mendekati warga dengan hati, bukan hanya aturan. Anak-anak Papua mengenalnya sebagai "Kakak Lita yang suka dengar", para mama pasar menyebutnya "Anak dari Timur yang tahu rasa". Ia hadir, bukan sekadar bekerja, tapi mengakar.
+      </p>
+      <p>
+        Dalam diamnya malam Timika, Lita kerap menulis surat untuk dirinya sendiri. Tentang kampung halaman, tentang rasa lelah, tentang harapan yang terus diperjuangkan. Ia percaya, setiap langkah yang setia adalah doa yang dijawab perlahan.
+      </p>
+      <p>
+        Hari ini, Lita Deros tak hanya menjadi simbol ASN muda yang berdedikasi, tetapi juga wajah dari semangat baru anak-anak daerah. Bahwa karir bukan soal tempat bergengsi, tetapi tentang di mana kita bisa memberi dampak paling berarti.
+      </p>
+    </div>
+    <div class="footer">
+      <div class="like-share">
+        <button onclick="toggleLike()">❤️ Suka (<span id="likeCount">103</span>)</button>
+        <button onclick="copyLink()">🔗 Bagikan</button>
       </div>
+      <div id="likeMessage"></div>
     </div>
   </div>
-
-  <script>
-    let count = localStorage.getItem("menitiKarirLikes") || 0;
-    document.getElementById("likeCount").innerText = count;
-
-    function likePost() {
-      count++;
-      localStorage.setItem("menitiKarirLikes", count);
-      document.getElementById("likeCount").innerText = count;
-    }
-
-    function copyLink() {
-      var copyText = document.getElementById("shareLink");
-      copyText.select();
-      copyText.setSelectionRange(0, 99999);
-      document.execCommand("copy");
-      alert("Link telah disalin: " + copyText.value);
-    }
-  </script>
 </body>
+
 </html>
