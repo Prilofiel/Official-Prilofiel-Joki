@@ -37,6 +37,7 @@
     .italic {
       font-style: italic;
       color: #555;
+      text-align: center;
     }
 
     .syair {
@@ -55,22 +56,31 @@
 
     .note {
       font-style: italic;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       color: #555;
       margin-top: 2rem;
+      border-top: 1px solid #ccc;
+      padding-top: 1rem;
     }
 
-    button {
+    .btns {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    button, .download-link, .back-link {
       background-color: #e53e3e;
       color: white;
       padding: 0.5rem 1rem;
       border: none;
       border-radius: 6px;
+      text-decoration: none;
       cursor: pointer;
-      margin-top: 1.5rem;
+      margin: 0.3rem;
+      display: inline-block;
     }
 
-    button:hover {
+    button:hover, .download-link:hover, .back-link:hover {
       background-color: #c53030;
     }
 
@@ -97,21 +107,15 @@
 <body>
   <main>
     <h1>Di Balik Gunung Ile Mandiri</h1>
-    <p class="italic">Oleh Stanislaus Prinz</p>
+    <p class="italic"><em>Oleh: <strong>Stanislaus Prinz</strong></em></p>
 
-    <p>Gunung Ile Mandiri berdiri gagah di ufuk Timur Larantuka, seperti penjaga abadi rahasia-rahasia tua yang tertimbun dalam sunyi. Di lerengnya, pada suatu pagi berangin, seorang pemuda kembali menapaki tanah leluhurnya—mencari jawaban, menyingkap kisah, dan menulis ulang takdir yang telah lama hilang dalam kabut.</p>
+    <p>Gunung Ile Mandiri berdiri gagah di ufuk Timur Larantuka, seperti penjaga abadi rahasia-rahasia tua yang tertimbun dalam sunyi...</p>
 
     <p><strong>Sebuah Pencarian di Tanah yang Tak Pernah Lupa</strong></p>
 
-    <p>Di timur jauh, di ujung pulau yang dilukis matahari sebelum fajar, berdirilah Ile Mandiri bukan sekadar gunung, melainkan sabda bisu dari zaman yang tak tercatat, bayang kekal yang mengendap di antara legenda dan doa-doa yang tak lagi diingat namanya.</p>
-
-    <p>Laki-laki itu bernama Ama Kael. Usianya melewati tiga puluh, tapi langkahnya seperti baru keluar dari usia dua puluh. Ia kembali ke kampung Lewolaga, setelah dua puluh tahun tinggal di kota yang tak pernah benar-benar jadi rumah. Ia kembali bukan untuk nostalgia, tapi untuk mencari sesuatu atau mungkin, seseorang. Tapi ia belum tahu pasti apa.</p>
+    <p>Di timur jauh, di ujung pulau yang dilukis matahari sebelum fajar, berdirilah Ile Mandiri bukan sekadar gunung, melainkan sabda bisu dari zaman yang tak tercatat...</p>
 
     <p>“Gunung ini bukan hanya batu dan api, Ama Kael,” kata seorang tua di pelabuhan saat ia turun dari kapal. “Ia adalah ingatan yang menyamar sebagai alam.”</p>
-
-    <p>Kael hanya tersenyum. Tapi dalam hatinya, ia tahu: gunung itu telah memanggilnya dalam mimpi selama tujuh malam berturut-turut...</p>
-
-    <p>Di hari ketiga di Lewolaga, Kael pergi ke Batu Keramat... Dalam hening, Laru bersenandung lagu tua:</p>
 
     <div class="syair">
       <p>Di balik batu, suara ibu<br>
@@ -120,20 +124,6 @@
       Akar tak bisa pulang utuh</p>
     </div>
 
-    <p>Kael merasakan lagu itu seperti membuka pintu yang lama terkunci...</p>
-
-    <p>Sampai di sebuah pondok kayu yang nyaris menyatu dengan tanah dan pohon...</p>
-
-    <p>Kael malam itu bermimpi lagi. Tapi kali ini perempuan berselendang merah menatapnya dan berkata dalam jelas:</p>
-
-    <div class="quote">
-      “Jagalah tanah ini. Karena jika generasi lupa, maka gunung akan berbicara dengan cara yang pahit.”
-    </div>
-
-    <p>Esoknya, Ina Mire menunjukkan buku kulit pohon yang diwariskan turun-temurun...</p>
-
-    <p>Kael tinggal di kampung beberapa minggu. Ia membantu Laru dan warga kampung...</p>
-
     <div class="quote">
       “Aku anak Ile Mandiri.<br>
       Aku darah yang hilang dan kini kembali.<br>
@@ -141,22 +131,17 @@
       Aku nyala harapan dari Timur.”
     </div>
 
-    <p>Kael tak pernah kembali ke kota. Ia membangun Sekolah Gunung di Lewolaga...</p>
-
-    <div class="quote">
-      “Gunung bukan cuma batu. Ia adalah nenek kita yang menyimpan rahasia.  
-      Jika kita dengarkan, kita akan tahu siapa kita sebenarnya.”
-    </div>
-
     <div class="note">
       <strong><em>Catatan Penulis:</em></strong><br>
-      <span>
       <em>Di Balik Gunung Ile Mandiri</em> adalah sebuah fiksi imajinatif yang terinspirasi dari kekayaan budaya dan spiritualitas Flores Timur. Cerita ini adalah penghormatan terhadap tanah kelahiran, pentingnya menjaga identitas, dan peran generasi muda sebagai jembatan antara masa lalu dan masa depan.
-      </span>
     </div>
 
-    <button onclick="likePost()">❤️ Like</button>
-    <span id="likeCount">0</span> suka
+    <div class="btns">
+      <button onclick="likePost()">❤️ Like</button>
+      <span id="likeCount">0</span> suka
+      <a class="download-link" href="https://github.com/Prilofiel/prilofiel-pdf/raw/main/di-balik-ile-mandiri.pdf" download>📄 Unduh PDF Lengkap</a><br>
+      <a href="arkade.html" class="back-link">&larr; Kembali ke Arkade</a>
+    </div>
   </main>
 
   <script>
