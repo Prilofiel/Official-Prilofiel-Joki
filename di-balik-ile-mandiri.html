@@ -2,97 +2,89 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Di Balik Ile Mandiri</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Di Balik Gunung Ile Mandiri</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto&display=swap" rel="stylesheet">
+  <script>
+    let liked = false;
+    let likes = 2780;
+    function toggleLike() {
+      if (!liked) {
+        likes++;
+        document.getElementById('like-count').innerText = likes;
+        document.getElementById('like-message').innerText = "Terima kasih telah menyukai.";
+        liked = true;
+      }
+    }
+  </script>
   <style>
     body {
-      font-family: 'Georgia', serif;
-      background-color: #fdf8f3;
-      color: #3e2f1c;
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f3eee8;
+      color: #333;
+      line-height: 1.6;
     }
     h1 {
-      color: #7b4c1e;
-      font-size: 2.5rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      margin-bottom: 0.2em;
     }
     .author {
       font-style: italic;
-      margin-bottom: 1rem;
+      margin-bottom: 1em;
     }
-    .like-btn, .copy-btn, .download-btn {
-      background-color: #a77d52;
+    .content {
+      margin-bottom: 2em;
+      white-space: pre-line;
+    }
+    .like-share {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .like-share button, .like-share a {
+      padding: 10px 15px;
+      background-color: #6f4e37;
       color: white;
       border: none;
-      padding: 0.6rem 1.2rem;
-      margin-right: 0.5rem;
+      border-radius: 5px;
       cursor: pointer;
-      border-radius: 8px;
+      text-decoration: none;
     }
-    .like-btn.liked {
-      background-color: #6d4c1b;
+    .like-share button:hover, .like-share a:hover {
+      background-color: #5a3f2e;
     }
-    .toolbar {
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-    }
-    .message {
-      color: green;
-      margin-top: 0.5rem;
-    }
-    .sinopsis {
-      margin-top: 2rem;
-      font-size: 1.1rem;
-      line-height: 1.7;
+    .info {
+      font-size: 0.9em;
+      color: #555;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
+  <h1>Di Balik Gunung Ile Mandiri</h1>
+  <div class="author">Karya: Stanislaus Prinz</div>
 
-  <h1>Di Balik Ile Mandiri</h1>
-  <div class="author">Oleh: Stanislaus Prinz</div>
-
-  <div class="toolbar">
-    <button class="like-btn" onclick="likePost()">Suka ❤️ (<span id="like-count">103</span>)</button>
-    <button class="copy-btn" onclick="copyLink()">Bagikan</button>
-    <button class="download-btn" onclick="downloadPDF()">Unduh PDF</button>
-    <div class="message" id="message"></div>
+  <div class="like-share">
+    <button onclick="toggleLike()">❤️ Suka (<span id="like-count">2780</span>)</button>
+    <a href="https://github.com/Prilofiel/prilofiel-pdf/raw/main/di-balik-ile-mandiri.pdf" download>⬇️ Unduh PDF</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://prilofiel.vercel.app/di-balik-ile-mandiri.html" target="_blank">🔗 Bagikan</a>
   </div>
+  <div class="info" id="like-message"></div>
 
-  <div class="sinopsis">
-    Di balik gunung Ile Mandiri yang menjulang, tersembunyi kisah tentang Lukas, seorang pemuda pencari jati diri yang kembali ke tanah leluhurnya di Larantuka. Dengan balutan sejarah dan bisikan leluhur, Lukas menelusuri jejak masa lalu keluarganya dan rahasia yang terkubur dalam sunyi. Di tiap langkah, ia temukan bahwa warisan bukan sekadar tanah dan nama, tetapi juga luka, harapan, dan panggilan jiwa. Cerita ini mengajak kita menyelami makna rumah, identitas, dan keberanian untuk berdamai dengan sejarah yang tak selesai.
+  <div class="content">
+Di balik gunung Ile Mandiri, tersembunyi kisah yang tak pernah ditulis di lembar sejarah. Bukan tentang pahlawan dengan senjata, tapi tentang anak muda yang menapak jejak leluhur demi mencari arti dirinya sendiri.
+
+Adalah Mikael, pemuda dari Lewolere, yang hidupnya terasa hampa di tengah hingar-bingar kota. Ia kembali ke kampung halamannya, terpanggil oleh mimpi aneh dan bisikan dalam doa-doanya. Gunung itu, kata orang tua, adalah penjaga rahasia tua.
+
+Hari-hari ia habiskan menjelajah lereng-lereng sunyi, berbincang dengan para tua adat, dan menelusuri lorong-lorong batu. Dalam satu malam yang dingin, ia bermimpi bertemu leluhurnya, yang memberinya tugas: "Tulislah ulang kisah kami yang hilang, anakku."
+
+Ia pun mulai menulis. Kisah-kisah yang dikumpulkannya bukan hanya tentang masa lalu, tapi tentang siapa dirinya dan mengapa tanah ini begitu sakral. Di balik gunung itu, Mikael menemukan bukan hanya sejarah, tapi dirinya sendiri.
+
+Cerita ini bukan hanya miliknya. Ini kisah kita semua—anak-anak dari timur yang mencari cahaya di antara bayang-bayang gunung. Di balik Ile Mandiri, kita menemukan pulang.
   </div>
-
-  <script>
-    let liked = false;
-    let likeCount = 103;
-
-    function likePost() {
-      if (!liked) {
-        liked = true;
-        likeCount++;
-        document.getElementById("like-count").innerText = likeCount;
-        document.querySelector(".like-btn").classList.add("liked");
-        document.getElementById("message").innerText = "Terima kasih telah menyukai.";
-      } else {
-        document.getElementById("message").innerText = "Kamu sudah menyukai ini.";
-      }
-    }
-
-    function copyLink() {
-      const link = window.location.href;
-      navigator.clipboard.writeText(link);
-      document.getElementById("message").innerText = "Link berhasil disalin.";
-    }
-
-    function downloadPDF() {
-      const pdfLink = "https://github.com/Prilofiel/prilofiel-pdf/raw/main/di-balik-ile-mandiri.pdf";
-      const link = document.createElement('a');
-      link.href = pdfLink;
-      link.download = "di-balik-ile-mandiri.pdf";
-      link.click();
-    }
-  </script>
 </body>
 </html>
